@@ -3,7 +3,7 @@ import { useState } from "react";
 function TodoList() {
   const [tasks, setTasks] = useState([]);
   const [newTasks, setNewTasks] = useState("");
-
+ 
   const handleNewTasks = (event) => {
     setNewTasks(event.target.value);
   };
@@ -16,9 +16,9 @@ function TodoList() {
   }
 
   const handleDeleteTasks = (index) => {
-    const newTasks = [...tasks];
-    newTasks.splice(index, 1);
-    setNewTasks(newTasks);
+    const newTask = [...tasks];
+    newTask.splice(index, 1);
+    setTasks(newTask);
   };
 
   return (
